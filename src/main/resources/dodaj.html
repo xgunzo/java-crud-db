@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Dodawanie zamówienia do rejestru zamówień</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<form action="http://localhost:8080/dodaj">
+  <table>
+    <tr>
+      <td>Podaj Nr Zamówienia </td>
+      <td><input name="nr_zamowienia"></td>
+    </tr>
+    <tr>
+      <td>Podaj markę przedmiotu</td>
+      <td> <input name="marka"> </td>
+    </tr>
+    <tr>
+      <td>Podaj model przedmiotu danej marki</td>
+      <td><input name="model_produktu"></td>
+    </tr>
+    <tr>
+      <td>Podaj imię zamawiającego</td>
+      <td><input name="imie"></td>
+    </tr>
+    <tr>
+      <td>Podaj nazwisko zamawiającego</td>
+      <td><input name="nazwisko"></td>
+    </tr>
+    <tr>
+      <td>Podaj numer telefonu zamawiającego</td>
+      <td><input name="nr_telefonu"></td>
+    </tr>
+    <tr>
+      <td>Podaj adres email zamawiającego</td>
+      <td><input name="email"></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit"></td>
+  </table>
+</form>
+</body>
+</html>

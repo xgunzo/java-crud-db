@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+<body>
+<div class="container">
+<div class="row">
+  <div class="col-12">
+  <p align="center"> <h2 style="text-align: center;">Zamówienia internetowe</h2></p> <br>
+  <table class="table table-striped">
+    <tr><th>Nr Zamówienia</th><th>Marka produktu</th><th>Model produktu</th><th>Imię</th><th>Nazwisko</th><th>Numer telefonu</th><th>E-Mail</th><th>Kasuj</th><th>Aktualizuj</th></tr>
+    <tr  th:each="wpis: ${zamowienie}">
+      <td th:text="${wpis.nr_zamowienia}">Nr Zamówienia</td>
+      <td th:text="${wpis.marka}">Marka produktu</td>
+      <td th:text="${wpis.model_produktu}">Model produktu</td>
+      <td th:text="${wpis.imie}">Imię</td>
+      <td th:text="${wpis.nazwisko}">Nazwisko</td>
+      <td th:text="${wpis.nr_telefonu}">Numer telefonu</td>
+      <td th:text="${wpis.email}">E-Mail</td>
+
+      <td>
+      <a href="#" th:href="@{/kasuj(id=${wpis.id})}" class="btn btn-danger">
+        <i class="fa fa-trash-o fa-lg"></i>Kasuj</a>
+      </td>
+
+      <td>
+        <a href="#" th:href="@{/przekieruj(id=${wpis.id})}" class="btn btn-primary">
+          <i class="fa fa-trash-o fa-lg"></i>Aktualizuj</a>
+      </td>
+
+    </tr>
+  </table>
+
+    <table class="table table-striped">
+      <tr><td> Wyszukaj osoby według adresu E-Mail</td><td><form action="http://localhost:8080/wyszukaj"><input name="kryterium"></td><td><input type="submit"></form></td></tr>
+
+    </table>
+
+
+  </div>
+</div>
+</div>
+</body>
+</html>

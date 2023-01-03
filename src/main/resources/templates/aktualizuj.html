@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aktualizuj</title>
+    </head>
+<body>
+<form   th:action="@{/aktualizuj}" th:object="${zamowienie}">
+
+    <table>
+        <tr>
+            <td>Podaj Nr Zamówienia </td>
+            <td><input name="nr_zamowienia" th:field="*{nr_zamowienia}"> </td>
+        </tr>
+        <tr>
+            <td>Podaj markę przedmiotu</td>
+            <td> <input name="marka" th:field="*{marka}"> </td>
+        </tr>
+        <tr>
+            <td>Podaj model przedmiotu danej marki</td>
+            <td><input name="model_produktu" th:field="*{model_produktu}"></td>
+        </tr>
+        <tr>
+            <td>Podaj imię zamawiającego</td>
+            <td><input name="imie" th:field="*{imie}"></td>
+        </tr>
+        <tr>
+            <td>Podaj nazwisko zamawiającego</td>
+            <td><input name="nazwisko" th:field="*{nazwisko}">
+        </tr>
+        <tr>
+            <td>Podaj numer telefonu zamawiającegoo</td>
+            <td><input name="nr_telefonu" th:field="*{nr_telefonu}">
+        </tr>
+        <tr>
+            <td>Podaj adres email zamawiającego</td>
+            <td><input name="email" th:field="*{email}">
+                <input type="hidden" name="id" th:field="*{id}"></td></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit"></td>
+    </table>
+</form>
+</body>
+</html>
