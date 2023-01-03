@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-<body>
+<body style="background-color: #333; color: #fff;">
 <div class="container">
 <div class="row">
   <div class="col-12">
   <p align="center"> <h2 style="text-align: center;">Zamówienia internetowe</h2></p> <br>
   <table class="table table-striped">
-    <tr><th>Nr Zamówienia</th><th>Marka produktu</th><th>Model produktu</th><th>Imię</th><th>Nazwisko</th><th>Numer telefonu</th><th>E-Mail</th><th>Kasuj</th><th>Aktualizuj</th></tr>
-    <tr  th:each="wpis: ${zamowienie}">
+    <tr style="color: #fff"><th>Nr Zamówienia</th><th>Marka produktu</th><th>Model produktu</th><th>Imię</th><th>Nazwisko</th><th>Numer telefonu</th><th>E-Mail</th><th>Kasuj</th><th>Aktualizuj</th></tr>
+    <tr style="color: #fff"  th:each="wpis: ${zamowienie}">
       <td th:text="${wpis.nr_zamowienia}">Nr Zamówienia</td>
       <td th:text="${wpis.marka}">Marka produktu</td>
       <td th:text="${wpis.model_produktu}">Model produktu</td>
@@ -35,7 +35,7 @@
   </table>
 
     <table class="table table-striped">
-      <tr><td> Wyszukaj osoby według adresu E-Mail</td><td><form action="http://localhost:8080/wyszukaj"><input name="kryterium"></td><td><input type="submit"></form></td></tr>
+      <tr style="color: #fff"><td> Wyszukaj osoby według adresu E-Mail</td><td><form action="http://localhost:8080/wyszukaj"><input name="kryterium"></td><td><input type="submit"></form></td></tr>
 
     </table>
 
